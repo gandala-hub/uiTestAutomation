@@ -8,11 +8,11 @@ Demo account data is stored in `test-data/testdata.json`. It contains public Sau
 ```bash
 npm ci
 npx playwright install chromium
-npm run test:login
+npx playwright test
 ```
 
 ## GitHub Actions
 
-The `Login test` workflow in `.github/workflows/login-test.yml` runs the login test on every push. It also runs when a pull request receives an approval. For approval runs, it checks out and tests the pull request's latest commit.
+The `Login test` workflow in `.github/workflows/playwright-github-actions.yml` runs the login test on every push. It also runs when a pull request receives an approval. For approval runs, it checks out and tests the pull request's latest commit.
 
 The workflow needs no SauceDemo credentials because the test uses SauceDemo's public demo account.
